@@ -19,9 +19,12 @@ export default function App() {
   return (
     <div className="relative w-screen h-screen bg-black">
       {/* Teks PORTOFOLIO */}
-      <h1 className="absolute top-1/2 left-[35%] -translate-x-1/2 -translate-y-1/2 text-[80px] font-serif font-bold text-white tracking-wider pointer-events-none select-none z-10">
+      <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
+               text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[100px]
+               font-serif font-bold text-white tracking-wider pointer-events-none select-none z-10">
         PORTOFOLIO
       </h1>
+
 
       {/* Canvas 3D */}
       <Canvas camera={{ position: [3, 0, 13], fov: 25 }}>

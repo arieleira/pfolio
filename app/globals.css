@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ✅ Import Font Awesome */
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -16,9 +19,20 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0px;
   background-color: #0f0f0f;
+}
+
+/* OPTIONAL: kalau mau efek navbar glassy transparan */
+.navbar-glass {
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.4); /* semi-transparent black */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
 .descriptions {
@@ -31,7 +45,7 @@ body {
 }
 
 .description {
-  background-color: #ec4e39;
+  background-color: #00ffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -40,4 +54,3 @@ body {
   clip-path: inset(50% 0 50%);
   transition: clip-path 0.4s;
 }
-

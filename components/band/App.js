@@ -140,6 +140,7 @@ export default function App() {
         <nav className="flex items-center gap-4 md:gap-8 text-base md:text-lg font-semibold bg-black/60 px-4 md:px-5 py-2 rounded-full backdrop-blur-md shadow-md text-white">
           <a href="#about"    className={`transition-colors duration-300 ${active==='about'    ? 'text-[#00ffff]' : ''} hover:[color:#00ffff]`}>About</a>
           <a href="#projects" className={`transition-colors duration-300 ${active==='projects' ? 'text-[#00ffff]' : ''} hover:[color:#00ffff]`}>Projects</a>
+          <a href="#tools"    className={`transition-colors duration-300 ${active==='tools'    ? 'text-[#00ffff]' : ''} hover:[color:#00ffff]`}>Tools</a>
           <a href="#contact"  className={`transition-colors duration-300 ${active==='contact'  ? 'text-[#00ffff]' : ''} hover:[color:#00ffff]`}>Contact</a>
         </nav>
       </div>
@@ -172,17 +173,39 @@ export default function App() {
       {/* =================== ABOUT =================== */}
       <section
         id="about"
-        className="relative z-20 w-full min-h-[92vh] md:min-h-[78vh] px-4 sm:px-6 md:px-12 xl:px-20 flex items-center justify-center text-white scroll-mt-24 md:scroll-mt-24"
+        className="
+          relative z-20 w-full
+          min-h-[92vh] md:min-h-[78vh] lg:min-h-[84vh]
+          px-4 sm:px-6 md:px-12 lg:px-16 xl:px-20
+          flex items-center justify-center text-white
+          scroll-mt-24 md:scroll-mt-24
+        "
       >
-        <div className="w-full md:max-w-[1200px] xl:max-w-[1400px]">
-          <Reveal as="h2" className="stable text-center text-4xl md:text-6xl font-extrabold text-cyan-400 drop-shadow-[0_0_12px_rgba(34,211,238,0.45)] mb-8 md:mb-14">
+        <div className="w-full md:max-w-[1200px] lg:max-w-[1400px] xl:max-w-[1500px]">
+          <Reveal
+            as="h2"
+            className="
+              stable text-center
+              text-4xl md:text-6xl lg:text-7xl
+              font-extrabold text-cyan-400
+              drop-shadow-[0_0_12px_rgba(34,211,238,0.45)]
+              mb-8 md:mb-14 lg:mb-16
+            "
+          >
             About Me
           </Reveal>
 
-          <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
+          <div className="flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-16 items-start">
             {/* LEFT */}
             <Reveal className="w-full md:w-7/12 order-2 md:order-1" delay={60}>
-              <p className="text-base md:text-xl leading-relaxed tracking-wide opacity-90 text-justify">
+              <p
+                className="
+                  text-base md:text-xl lg:text-2xl xl:text-[28px]
+                  leading-relaxed md:leading-relaxed lg:leading-loose
+                  tracking-wide lg:tracking-[0.01em]
+                  opacity-90 text-justify
+                "
+              >
                 Hello, I’m Ariel Saradilla from the Faculty of Informatics, majoring in Data Science. I have a strong interest in technology and programming.
                 As a Data Science student, I am driven by curiosity and a desire to keep learning and improving my skills.
                 <br/><br/>
@@ -192,46 +215,61 @@ export default function App() {
             </Reveal>
 
             {/* RIGHT — OPAK */}
-            <Reveal className="relative w-full md:w-5/12 order-1 md:order-2 rounded-xl p-6 md:p-8 xl:p-10 bg-neutral-900 border border-cyan-500/60" delay={120}>
+            <Reveal
+            className="
+              relative w-full md:w-5/12 order-1 md:order-2
+              rounded-xl lg:rounded-2xl
+              p-6 md:p-8 lg:p-10 xl:p-12
+              bg-neutral-900 border border-cyan-500/60
+              shadow-[0_0_24px_rgba(34,211,238,0.15)]
+              h-full flex flex-col justify-between
+            "
+            delay={120}
+          >
               <div className="space-y-4">
-                <div className="flex items-center gap-3 text-cyan-400 text-xl font-semibold">
-                  <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <div className="flex items-center gap-3 text-cyan-400 text-xl md:text-2xl lg:text-3xl font-semibold">
+                  <svg className="w-7 h-7 md:w-8 md:h-8 lg:w-9 lg:h-9" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                     <path d="M12 14l9-5-9-5-9 5 9 5z" />
                     <path d="M12 14l6.16-3.422A12.083 12.083 0 0118 20.058M12 14v6.058M12 14L5.84 10.578A12.083 12.083 0 006 20.058" />
                   </svg>
                   Academic Education
                 </div>
-                <ul className="list-disc list-inside text-gray-200 text-lg space-y-1 pl-2">
+                <ul className="list-disc list-inside text-gray-200 text-lg md:text-xl lg:text-[22px] space-y-1 pl-2">
                   <li>
                     University of Telkom Bandung – Data Science <br />
-                    <span className="text-sm text-gray-400">2023 – Present</span>
+                    <span className="text-sm md:text-base lg:text-lg text-gray-400">2023 – Present</span>
                   </li>
                 </ul>
               </div>
 
-              <div className="space-y-4 mt-6">
-                <div className="flex items-center gap-3 text-cyan-400 text-xl font-semibold">
-                  <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+              <div className="space-y-4 mt-6 lg:mt-8">
+                <div className="flex items-center gap-3 text-cyan-400 text-xl md:text-2xl lg:text-3xl font-semibold">
+                  <svg className="w-7 h-7 md:w-8 md:h-8 lg:w-9 lg:h-9" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                     <path d="M9 12h6m-6 4h6m-3-8h.01M12 12v.01M3 12a9 9 0 1118 0 9 9 0 01-18 0z" />
                   </svg>
                   Non-Formal Education
                 </div>
-                <ul className="list-disc list-inside text-gray-200 text-lg space-y-1 pl-2">
+                <ul className="list-disc list-inside text-gray-200 text-lg md:text-xl lg:text-[22px] space-y-1 pl-2">
                   <li>
                     Bootcamp Dibimbing <br />
-                    <span className="text-sm text-gray-400">March 2025 – September 2025</span>
+                    <span className="text-sm md:text-base lg:text-lg text-gray-400">March 2025 – September 2025</span>
                   </li>
                 </ul>
               </div>
 
-              <div className="group cursor-pointer flex items-center gap-1 mt-4 justify-end">
-                <span className="text-white transition-colors duration-300 group-hover:text-cyan-400 text-sm">View Full Education</span>
-                <span className="text-cyan-400 opacity-0 -translate-x-1 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 text-sm">→</span>
+              <div className="group cursor-pointer flex items-center gap-1 mt-4 lg:mt-6 justify-end">
+                <span className="text-white transition-colors duration-300 group-hover:text-cyan-400 text-sm md:text-base lg:text-lg">
+                  View Full Education
+                </span>
+                <span className="text-cyan-400 opacity-0 -translate-x-1 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 text-sm md:text-base lg:text-lg">
+                  →
+                </span>
               </div>
             </Reveal>
           </div>
         </div>
       </section>
+
 
       {/* =================== PROJECTS =================== */}
       <section
@@ -328,18 +366,33 @@ function ToolsSection(){
   const Card = ({name, Icon, delay}) => (
     <Reveal delay={delay} className="group">
       <div
-        className="h-full rounded-2xl p-4 md:p-6 bg-neutral-900/90 border border-neutral-800
-                   flex flex-col items-center justify-center text-center
-                   transition-all duration-300
-                   hover:border-cyan-400 hover:shadow-[0_0_24px_rgba(34,211,238,0.35)] hover:-translate-y-1"
+        className="
+          h-full rounded-2xl 
+          p-5 md:p-8 lg:p-10
+          bg-neutral-900/90 border border-neutral-800
+          flex flex-col items-center justify-center text-center
+          transition-all duration-300
+          hover:border-cyan-400 hover:shadow-[0_0_28px_rgba(34,211,238,0.4)] hover:-translate-y-1
+        "
       >
-        <div className="w-14 h-14 md:w-16 md:h-16 rounded-xl flex items-center justify-center
-                        bg-gradient-to-b from-neutral-800 to-neutral-700
-                        transition-all duration-300
-                        group-hover:from-cyan-600 group-hover:to-sky-500">
-          <Icon className="w-8 h-8 text-white" />
+        <div
+          className="
+            w-16 h-16 md:w-24 md:h-24 lg:w-28 lg:h-28
+            rounded-xl flex items-center justify-center
+            bg-gradient-to-b from-neutral-800 to-neutral-700
+            transition-all duration-300
+            group-hover:from-cyan-600 group-hover:to-sky-500
+          "
+        >
+          <Icon className="w-9 h-9 md:w-14 md:h-14 lg:w-16 lg:h-16 text-white" />
         </div>
-        <div className="mt-3 font-semibold tracking-wide group-hover:text-cyan-200 transition-colors">
+        <div
+          className="
+            mt-3 md:mt-4 font-semibold tracking-wide
+            text-base md:text-xl lg:text-2xl
+            group-hover:text-cyan-200 transition-colors
+          "
+        >
           {name}
         </div>
       </div>
@@ -347,19 +400,51 @@ function ToolsSection(){
   );
 
   return (
-    <section id="tools" className="relative z-20 w-full min-h-[50vh] px-4 sm:px-6 md:px-12 xl:px-20 flex items-center justify-center text-white scroll-mt-24 md:scroll-mt-24">
-      <div className="w-full md:max-w-[1200px] xl:max-w-[1400px] py-8 md:py-12">
-        <Reveal as="h2" className="stable text-center text-3xl md:text-5xl font-bold text-cyan-400 drop-shadow-[0_0_12px_rgba(34,211,238,0.45)] mb-6 md:mb-10">
+    <section
+      id="tools"
+      className="
+        relative z-20 w-full min-h-[50vh]
+        px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20
+        flex items-center justify-center text-white
+        scroll-mt-24 md:scroll-mt-24
+      "
+    >
+      <div
+        className="
+          w-full
+          md:max-w-[1200px] lg:max-w-[1400px] xl:max-w-[1600px]
+          py-8 md:py-12 lg:py-16
+        "
+      >
+        <Reveal
+          as="h2"
+          className="
+            stable text-center
+            text-3xl md:text-5xl lg:text-6xl
+            font-bold text-cyan-400
+            drop-shadow-[0_0_12px_rgba(34,211,238,0.45)]
+            mb-6 md:mb-10 lg:mb-14
+          "
+        >
           Tools
         </Reveal>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-5">
-          {tools.map((t, i) => <Card key={t.name} {...t} delay={60 + i*40} />)}
+        <div
+          className="
+            grid
+            grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5
+            gap-4 md:gap-6 lg:gap-8
+          "
+        >
+          {tools.map((t, i) => (
+            <Card key={t.name} {...t} delay={60 + i*40} />
+          ))}
         </div>
       </div>
     </section>
   );
 }
+
 
 /* ================== CONTACT SECTION ================== */
 function ContactSection() {
@@ -395,74 +480,205 @@ function ContactSection() {
   };
 
   return (
-    <section id="contact" className="relative z-20 w-full min-h-[92vh] md:min-h-[78vh] px-4 sm:px-6 md:px-12 xl:px-20 flex flex-col items-center justify-center text-white scroll-mt-24 md:scroll-mt-24">
-      <div className="w-full md:max-w-[1200px] xl:max-w-[1400px] p-4 md:p-8 xl:p-10">
-        <Reveal as="div" className="text-center mb-8 md:mb-12">
-          <h2 className="stable text-3xl md:text-5xl font-extrabold text-cyan-400 drop-shadow-[0_0_12px_rgba(34,211,238,0.45)]">Contact Me</h2>
-          <p className="text-white/60 mt-2">Got a question? Send me a message, and I'll get back to you soon.</p>
+    <section
+      id="contact"
+      className="
+        relative z-20 w-full
+        min-h-[92vh] md:min-h-[78vh]
+        px-4 sm:px-6 md:px-10 lg:px-14 xl:px-20
+        flex flex-col items-center justify-center text-white
+        scroll-mt-24 md:scroll-mt-24
+      "
+    >
+      <div
+        className="
+          w-full
+          md:max-w-[1200px] lg:max-w-[1400px] xl:max-w-[1600px]
+          p-4 md:p-8 lg:p-10 xl:p-12
+        "
+      >
+        <Reveal as="div" className="text-center mb-8 md:mb-12 lg:mb-14">
+          <h2
+            className="
+              stable
+              text-3xl md:text-5xl lg:text-6xl
+              font-extrabold text-cyan-400
+              drop-shadow-[0_0_12px_rgba(34,211,238,0.45)]
+            "
+          >
+            Contact Me
+          </h2>
+          <p className="text-white/60 mt-2 text-sm md:text-base lg:text-lg">
+            Got a question? Send me a message, and I'll get back to you soon.
+          </p>
         </Reveal>
 
-        <div className="grid md:grid-cols-[460px,1fr] gap-6 md:gap-8">
+        <div
+          className="
+            grid
+            md:grid-cols-[520px,1fr] lg:grid-cols-[600px,1fr] xl:grid-cols-[680px,1fr]
+            gap-6 md:gap-8 lg:gap-10 xl:gap-12
+          "
+        >
           {/* LEFT */}
-          <Reveal className="bg-neutral-900 border border-neutral-800 rounded-2xl p-5 md:p-6">
-            <div className="flex items-center justify-between mb-4">
-              <h3 className="text-xl font-semibold">Get in Touch</h3>
-              <span className="text-cyan-400">⋯</span>
+          <Reveal
+            className="
+              bg-neutral-900 border border-neutral-800 rounded-2xl
+              p-5 md:p-6 lg:p-8 xl:p-10
+            "
+          >
+            <div className="flex items-center justify-between mb-4 md:mb-5 lg:mb-6">
+              <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold">Get in Touch</h3>
+              <span className="text-cyan-400 text-xl md:text-2xl">⋯</span>
             </div>
 
-            <form className="space-y-3">
+            <form className="space-y-3 md:space-y-4 lg:space-y-5" onSubmit={onSubmit}>
               <label className="relative block">
                 <input
                   value={name} onChange={(e)=>setName(e.target.value)}
                   type="text" placeholder="Your Name"
-                  className="w-full bg-neutral-800 border border-neutral-700 rounded-lg pl-10 pr-3 py-3 outline-none
-                             focus:border-cyan-400 hover:border-cyan-400/70"
+                  className="
+                    w-full
+                    bg-neutral-800 border border-neutral-700 rounded-lg
+                    pl-10 pr-3 py-3 md:py-4 lg:py-4.5
+                    text-sm md:text-base lg:text-lg
+                    outline-none focus:border-cyan-400 hover:border-cyan-400/70
+                  "
                 />
-                <IconUser className="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-white/60" />
+                <IconUser className="w-5 h-5 md:w-6 md:h-6 absolute left-3 top-1/2 -translate-y-1/2 text-white/60" />
               </label>
+
               <label className="relative block">
                 <input
                   type="email" placeholder="Your Email"
-                  className="w-full bg-neutral-800 border border-neutral-700 rounded-lg pl-10 pr-3 py-3 outline-none
-                             focus:border-cyan-400 hover:border-cyan-400/70"
+                  className="
+                    w-full
+                    bg-neutral-800 border border-neutral-700 rounded-lg
+                    pl-10 pr-3 py-3 md:py-4 lg:py-4.5
+                    text-sm md:text-base lg:text-lg
+                    outline-none focus:border-cyan-400 hover:border-cyan-400/70
+                  "
                 />
-                <IconMail className="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-white/60" />
-              </label>
-              <label className="relative block">
-                <textarea
-                  placeholder="Your Message" rows={5}
-                  className="w-full bg-neutral-800 border border-neutral-700 rounded-lg pl-10 pr-3 py-3 outline-none
-                             focus:border-cyan-400 hover:border-cyan-400/70 resize-none"
-                />
-                <IconMsg className="w-5 h-5 absolute left-3 top-3 text-white/60" />
+                <IconMail className="w-5 h-5 md:w-6 md:h-6 absolute left-3 top-1/2 -translate-y-1/2 text-white/60" />
               </label>
 
-              <button
-                type="button"
-                className="w-full mt-2 inline-flex items-center justify-center gap-2 py-3 rounded-lg
-                           bg-gradient-to-r from-cyan-500 to-cyan-400 text-white
-                           hover:brightness-110 transition shadow-[0_0_16px_rgba(34,211,238,0.35)]"
-              >
-                <IconSend className="w-5 h-5" />
-                <span className="font-semibold">Send Message</span>
-              </button>
+              <label className="relative block">
+                <textarea
+                  value={message} onChange={(e)=>setMessage(e.target.value)}
+                  placeholder="Your Message" rows={5}
+                  className="
+                    w-full
+                    bg-neutral-800 border border-neutral-700 rounded-lg
+                    pl-10 pr-3 py-3 md:py-4 lg:py-4.5
+                    text-sm md:text-base lg:text-lg
+                    outline-none focus:border-cyan-400 hover:border-cyan-400/70
+                    resize-none
+                  "
+                />
+                <IconMsg className="w-5 h-5 md:w-6 md:h-6 absolute left-3 top-3 md:top-4 text-white/60" />
+              </label>
+
+              <div className="flex items-center justify-between gap-3">
+                <label className="flex-1">
+                  <input
+                    type="file" accept="image/*" onChange={onPick}
+                    className="
+                      block w-full
+                      text-xs md:text-sm lg:text-base
+                      file:mr-3 file:py-2 md:file:py-2.5 file:px-3 md:file:px-4
+                      file:rounded-md file:border-0
+                      file:bg-neutral-700 file:text-white
+                      hover:file:bg-neutral-600
+                    "
+                  />
+                </label>
+
+                <button
+                  type="submit"
+                  className="
+                    inline-flex items-center justify-center gap-2
+                    px-4 md:px-6 lg:px-7
+                    py-3 md:py-3.5
+                    rounded-lg
+                    bg-gradient-to-r from-cyan-500 to-cyan-400 text-white
+                    text-sm md:text-base lg:text-lg
+                    hover:brightness-110 transition
+                    shadow-[0_0_16px_rgba(34,211,238,0.35)]
+                  "
+                >
+                  <IconSend className="w-5 h-5 md:w-6 md:h-6" />
+                  <span className="font-semibold">Send Message</span>
+                </button>
+              </div>
             </form>
 
             {/* Connect with me */}
-            <div className="mt-6 bg-neutral-900 border border-neutral-800 rounded-xl p-4">
-              <p className="text-white/70 mb-3 font-medium">Connect With Me</p>
-              <div className="space-y-3">
-                <a href="https://www.linkedin.com/in/ariel-saradilla/" target="_blank" className="flex items-center gap-3 bg-neutral-800 border border-neutral-700 rounded-lg px-3 py-3 hover:border-cyan-400/70 transition">
-                  <span className="p-2 rounded-lg bg-neutral-900"><IconLinkedIn className="w-5 h-5 text-sky-400" /></span>
-                  <div><div className="font-semibold">LinkedIn</div><div className="text-xs text-white/60">Ariel Saradilla</div></div>
+            <div
+              className="
+                mt-6 md:mt-7 lg:mt-8
+                bg-neutral-900 border border-neutral-800 rounded-xl
+                p-4 md:p-5 lg:p-6
+              "
+            >
+              <p className="text-white/70 mb-3 md:mb-4 font-medium text-sm md:text-base lg:text-lg">
+                Connect With Me
+              </p>
+              <div className="space-y-3 md:space-y-4">
+                <a
+                  href="https://www.linkedin.com/in/ariel-saradilla/"
+                  target="_blank"
+                  className="
+                    flex items-center gap-3 md:gap-4
+                    bg-neutral-800 border border-neutral-700 rounded-lg
+                    px-3 md:px-4 lg:px-5 py-3 md:py-3.5
+                    hover:border-cyan-400/70 transition
+                  "
+                >
+                  <span className="p-2 md:p-2.5 rounded-lg bg-neutral-900">
+                    <IconLinkedIn className="w-5 h-5 md:w-6 md:h-6 text-sky-400" />
+                  </span>
+                  <div>
+                    <div className="font-semibold text-sm md:text-base lg:text-lg">LinkedIn</div>
+                    <div className="text-xs md:text-sm text-white/60">Ariel Saradilla</div>
+                  </div>
                 </a>
-                <a href="https://wa.me/6281267259488" target="_blank" className="flex items-center gap-3 bg-neutral-800 border border-neutral-700 rounded-lg px-3 py-3 hover:border-cyan-400/70 transition">
-                  <span className="p-2 rounded-lg bg-neutral-900"><IconWhatsApp className="w-5 h-5 text-green-400" /></span>
-                  <div><div className="font-semibold">WhatsApp</div><div className="text-xs text-white/60">+62 812-6725-9488</div></div>
+
+                <a
+                  href="https://wa.me/6281267259488"
+                  target="_blank"
+                  className="
+                    flex items-center gap-3 md:gap-4
+                    bg-neutral-800 border border-neutral-700 rounded-lg
+                    px-3 md:px-4 lg:px-5 py-3 md:py-3.5
+                    hover:border-cyan-400/70 transition
+                  "
+                >
+                  <span className="p-2 md:p-2.5 rounded-lg bg-neutral-900">
+                    <IconWhatsApp className="w-5 h-5 md:w-6 md:h-6 text-green-400" />
+                  </span>
+                  <div>
+                    <div className="font-semibold text-sm md:text-base lg:text-lg">WhatsApp</div>
+                    <div className="text-xs md:text-sm text-white/60">+62 812-6725-9488</div>
+                  </div>
                 </a>
-                <a href="https://github.com/ariledla" target="_blank" className="flex items-center gap-3 bg-neutral-800 border border-neutral-700 rounded-lg px-3 py-3 hover:border-cyan-400/70 transition">
-                  <span className="p-2 rounded-lg bg-neutral-900"><IconGitHub className="w-5 h-5 text-white" /></span>
-                  <div><div className="font-semibold">GitHub</div><div className="text-xs text-white/60">@ariledla</div></div>
+
+                <a
+                  href="https://github.com/ariledla"
+                  target="_blank"
+                  className="
+                    flex items-center gap-3 md:gap-4
+                    bg-neutral-800 border border-neutral-700 rounded-lg
+                    px-3 md:px-4 lg:px-5 py-3 md:py-3.5
+                    hover:border-cyan-400/70 transition
+                  "
+                >
+                  <span className="p-2 md:p-2.5 rounded-lg bg-neutral-900">
+                    <IconGitHub className="w-5 h-5 md:w-6 md:h-6 text-white" />
+                  </span>
+                  <div>
+                    <div className="font-semibold text-sm md:text-base lg:text-lg">GitHub</div>
+                    <div className="text-xs md:text-sm text-white/60">@ariledla</div>
+                  </div>
                 </a>
               </div>
             </div>
@@ -475,12 +691,15 @@ function ContactSection() {
             file={file} setFile={setFile}
             onPick={onPick} onSubmit={onSubmit}
             comments={comments}
+            // Bonus kecil: tambah padding & ukuran font supaya selaras di laptop
+            classNameRoot="p-4 md:p-6 lg:p-8 xl:p-10 text-sm md:text-base lg:text-lg"
           />
         </div>
       </div>
     </section>
   );
 }
+
 
 function CommentsCard({name,setName,message,setMessage,file,setFile,onPick,onSubmit,comments}){
   return (

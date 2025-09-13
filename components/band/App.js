@@ -238,9 +238,16 @@ export default function App() {
       </div>
 
       {/* HERO */}
-      <h1 className="absolute text-4xl sm:text-5xl md:text-[120px] lg:text-[170px] xl:text-[200px] top-24 md:top-[47%] left-1/2 md:left-[35%] -translate-x-1/2 md:-translate-y-1/2 font-serif font-bold text-white tracking-wider pointer-events-none select-none z-30 md:z-10 text-center">
+      <h1
+        className="absolute 
+                  text-3xl sm:text-4xl md:text-[80px] lg:text-[120px] xl:text-[150px] 
+                  top-24 md:top-[47%] left-1/2 md:left-[35%] 
+                  -translate-x-1/2 md:-translate-y-1/2 
+                  font-serif font-bold text-white tracking-wider 
+                  pointer-events-none select-none z-30 md:z-10 text-center">
         PORTOFOLIO
       </h1>
+
 
       {/* 3D */}
       <div className="h-screen relative z-10 md:z-0">

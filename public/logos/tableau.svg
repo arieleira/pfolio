@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="512" height="512">
+
+
+<g stroke="#2C6FF1" stroke-width="4" stroke-linecap="round">
+  <!-- central big plus -->
+  <line x1="50" y1="18" x2="50" y2="34"/>
+  <line x1="42" y1="26" x2="58" y2="26"/>
+  <!-- small grid -->
+  <line x1="26" y1="44" x2="26" y2="56"/><line x1="20" y1="50" x2="32" y2="50"/>
+  <line x1="50" y1="44" x2="50" y2="56"/><line x1="44" y1="50" x2="56" y2="50"/>
+  <line x1="74" y1="44" x2="74" y2="56"/><line x1="68" y1="50" x2="80" y2="50"/>
+  <line x1="26" y1="68" x2="26" y2="80"/><line x1="20" y1="74" x2="32" y2="74"/>
+  <line x1="50" y1="68" x2="50" y2="80"/><line x1="44" y1="74" x2="56" y2="74"/>
+  <line x1="74" y1="68" x2="74" y2="80"/><line x1="68" y1="74" x2="80" y2="74"/>
+</g>
+
+  </svg>
